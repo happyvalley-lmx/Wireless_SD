@@ -3,7 +3,7 @@
 #include "ESP8266FtpServer.h"
 
 const char* ssid = "SDcard Reader";
-const char* password = "ASDF@123";
+const char* password = "OSHWHubNB";
 
 // config static IP
 IPAddress apIP(192, 168, 12,7);  
