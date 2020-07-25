@@ -2,7 +2,7 @@
 
 一款基于ESP12模组实现的无线式SD、TF卡读卡器，只需将已插入待读取存储卡的本设备插入任何可供DC5V的USB端口即可，它将创建一个架设在WiFi上的FTP服务器，我们可以通过其进行对存储卡的读写操作。源工程来自 //www.hackster.io/Neutrino-1 的 //www.hackster.io/Neutrino-1/wireless-sd-card-reader-esp8266-de7f07 ，本项目仅依照源工程文章描述通过LCEDA绘制了合适的PCB原理图与电路。
 
-![A81E3C0E8DAA30FAE65E881D8619F837.jpg](//image.lceda.cn/pullimage/6uitOsuLZVD1qrOzdd1OnVvDOFZX4NIGUzQml1SG.jpeg)
+![打样图](http://image.lceda.cn/pullimage/6uitOsuLZVD1qrOzdd1OnVvDOFZX4NIGUzQml1SG.jpeg)
 
 ### 开始
 
