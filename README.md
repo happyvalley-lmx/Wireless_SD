@@ -1,39 +1,39 @@
-# Wireless_SD
+# 无线读卡器
 
-A normal micro SD to SD adapter is converted into a wireless Card reader using esp12E with FTP support.
-Files can be transferred to SD and also files can be copied from SD to any device where you can run an FTP client.
-For this particular project I used the AndFTP client for Android and the same process can be followed in PC by using WinSCP.
+一款基于ESP12模组实现的无线式SD、TF卡读卡器，只需将已插入待读取存储卡的本设备插入任何可供DC5V的USB端口即可，它将创建一个架设在WiFi上的FTP服务器，我们可以通过其进行对存储卡的读写操作。源工程来自 //www.hackster.io/Neutrino-1 的 //www.hackster.io/Neutrino-1/wireless-sd-card-reader-esp8266-de7f07 ，本项目仅依照源工程文章描述通过LCEDA绘制了合适的PCB原理图与电路。
 
-![Wireless SD final build](https://github.com/Neutrino-1/Wireless_SD/blob/master/Circuit/wireless%20SD%20another.jpg)
+![A81E3C0E8DAA30FAE65E881D8619F837.jpg](//image.lceda.cn/pullimage/6uitOsuLZVD1qrOzdd1OnVvDOFZX4NIGUzQml1SG.jpeg)
 
-### Getting Started
+### 开始
 
-Open **Wireless_SD.ino** with arduino IDE [Tested on Arudino IDE 1.8.12 above]
-all the other files will open along with it.
+下载zip包，解压并重命名文件夹为 Wireless_SD，即去掉 '-master' 字符串，使用Arduino IDE(在1.8.12上测试通过)打开目录下的 Wireless_SD.ino，相关依赖文件会一并打开。因体积和成本原因没有外围烧录电路，所以需要固件烧录完毕再行焊接。参考下图接线图，使用任意USB-TTL烧录器连接ESP12模组，点击Arduino IDE的上传按钮烧录至ESP12模组，再将ESP12模组焊接至PCB上。
 
-### Prerequisites
+![USB-TTL接线图](http://wiki.ai-thinker.com/_media/esp_download/downloadfirmware_hardware.png)
+
+### 开发板管理器(Arduino的迷惑翻译)
 
 * [ESP-Core](https://github.com/esp8266/Arduino) - by Ivan Grokhotkov
 
-### Usage
+### 使用方法
 
-Once the device is powered up follow the below steps to transfer data from SD card:
+将SD/TF存储卡插入卡槽，并插入任意提供DC5V的USB端口上电，接下来请按照如下步骤进行文件传输：
 ```
--> Connect to the acess point named "SD Reader" with the password "ASDF@123".
+-> 连接一个SSID为 'SDcard Reader' 的WiFi，密码是 'OSHWHubNB'，有些系统会弹窗提示该连接无网络，是正常现象，请勿断开连接。
 
--> download any FTP client application (Android - AndFTP, Windows - WinScp).
+-> 打开FTP客户端，安卓端建议：AndFTP、ES文件浏览器，Windows端建议：WinScp、FileZilla Client。
 
--> Host name "192.168.12.7" Port "21".
+-> 配置FTP的主机名为 '192.168.12.7'，端口为 21。
 
--> Enter the user name and password as "esp8266".
+-> 用户名与密码均为 'esp8266'。
 
--> Connect to the server
+-> 连接即可。
 ```
 
-## License
+## 开源协议
 
-This project is licensed under the GNU License - see the [LICENSE.md](https://github.com/Neutrino-1/Wireless_SD/blob/master/LICENSE) file for details
+GPL 3.0
 
-## Acknowledgments
+## 致谢
 
-* [David Paiva](https://github.com/nailbuster) Ported Arduino FTP server to esp8266/esp32.
+* 来自 [Neutrino-1](https://github.com/Neutrino-1) 的开源项目。
+* [David Paiva](https://github.com/nailbuster) 为 ESP8266/ESP32 移植的 Arduino FTP 库。
