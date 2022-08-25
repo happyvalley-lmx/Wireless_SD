@@ -4,6 +4,11 @@
 
 ![打样图](https://github.com/Giftia/Wireless_SD/blob/master/PCB.jpg)
 
+### TODO:
+
+* 将内置SD库更换为ESP8266SdFat库以支持exFAT格式的SD卡 - [ ]  
+* 增加OTA升级功能 - [ ]  
+
 ### 开始
 
 下载zip包，解压并重命名文件夹为 Wireless_SD，即去掉 '-master' 字符串，使用Arduino IDE(在1.8.12上测试通过)打开目录下的 Wireless_SD.ino，相关依赖文件会一并打开。因体积和成本原因没有外围烧录电路，所以需要固件烧录完毕再行焊接。参考下图接线图，使用任意USB-TTL烧录器连接ESP12模组，点击Arduino IDE的上传按钮烧录至ESP12模组，再将ESP12模组焊接至PCB上。
