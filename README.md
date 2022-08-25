@@ -6,8 +6,8 @@
 
 ### TODO:
 
-* 将内置SD库更换为ESP8266SdFat库以支持exFAT格式的SD卡 - [ ]  
-* 增加OTA升级功能 - [ ]  
+- [ ] 将内置SD库更换为ESP8266SdFat库以支持exFAT格式的SD卡  
+- [ ] 增加OTA升级功能  
 
 ### 开始
 
